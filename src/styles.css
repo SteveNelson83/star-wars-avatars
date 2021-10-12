@@ -1,0 +1,79 @@
+body {
+  color: yellow;
+  background: black;
+}
+
+.heading {
+  padding: 10px;
+  text-align: center;
+  font-size: 60px;
+  text-decoration: underline overline yellow;
+}
+
+.subHeading {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 10px;
+  text-decoration: underline yellow;
+}
+
+.characters {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  grid-gap: 50px;
+}
+
+.container {
+	display: flex;
+}
+
+.character {
+  min-height: 200px;
+}
+
+.card {
+  display: flex;
+  border: 2px solid yellow;
+  width: 450px;
+  height: 400px;
+}
+
+.charactersContainer {
+  width: 70%;
+}
+
+.cardLeft {
+  width: 60%;
+  padding-left: 25px;
+}
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchBar {
+  width: 150px;
+  background: yellow;
+  padding: 2px;
+  margin: 10px;
+}
+
+.searchBox {
+  text-align: center;
+}
+
+h1 {
+  width: max-content;
+}
+
+.pageNumbers {
+  text-align: center;
+  margin: 15px;
+}
+
+button {
+  background: yellow;
+  margin: 5px;
+}

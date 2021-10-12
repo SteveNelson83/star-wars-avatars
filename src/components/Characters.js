@@ -1,5 +1,6 @@
 import React from 'react';
 import Character from './Character';
+import "../styles.css";
 
 const Characters = ({characters=[]}) => {
   return (
@@ -8,8 +9,7 @@ const Characters = ({characters=[]}) => {
         if (character) {
           return (
             <div key={character.name}>
-              <h1>{character.name}</h1>
-              <Character {...character}/>
+              <Character className="character" {...character}/>
 	    </div>	
     	   )	
     	 }

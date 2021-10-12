@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 import Characters from "./Characters";
+import "../styles.css";
 
 const SearchPage = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -59,19 +60,32 @@ const SearchPage = () => {
 
   return (
     <>
-      <h1>Character List</h1>
-      <SearchBar input={searchInput} onChange={updateInput} />
-      {showSearch
-        ? <Characters characters={searchResults} />
-        :  <Characters characters={displayedCharacters} />
-      }
-      <div>
-      {pageNumbers.map((page) => {
-            return (
-              <button onClick={() => setPageNumber(page)} key={page}>{page}</button>
-            );
-          })}
-      </div>   
+      <div className="heading">Star Wars Casting Couch</div>
+      <div className="container">
+        <div className="searchBox">
+          <div className="subHeading">Search by Name</div>
+          <SearchBar input={searchInput} onChange={updateInput} />
+        </div>
+        <div className="charactersContainer">
+          <div className="subHeading">Characters</div>
+          <div className="pageNumbers">Page Number
+        {pageNumbers.map((page) => {
+          return (
+            <button onClick={() => setPageNumber(page)} key={page}>
+              {page}
+            </button>
+          );
+        })}
+      </div>
+          <div className="characters">
+            {showSearch ? (
+              <Characters characters={searchResults} />
+            ) : (
+              <Characters characters={displayedCharacters} />
+            )}
+          </div>
+        </div>
+      </div>
     </>
   );
 };
